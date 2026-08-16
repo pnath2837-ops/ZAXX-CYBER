@@ -9,15 +9,33 @@ def clear():
 def banner():
     clear()
 
-    # Large ZAXX logo
-    os.system("figlet -f big ZAXX")
+    print(r"""
+╔══════════════════════════════════════════════════════════════════════╗
+║                                                                      ║
+║       ███████╗ █████╗ ██╗  ██╗██╗  ██╗                            ║
+║       ╚══███╔╝██╔══██╗╚██╗██╔╝╚██╗██╔╝                            ║
+║          ███╔╝ ███████║ ╚███╔╝  ╚███╔╝                             ║
+║         ███╔╝  ██╔══██║ ██╔██╗  ██╔██╗                             ║
+║        ███████╗██║  ██║██╔╝ ██╗██╔╝ ██╗                            ║
+║        ╚══════╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝                            ║
+║                                                                      ║
+║                         ZAXX CYBER                                   ║
+║                         Version 1.0                                  ║
+║                                                                      ║
+╚══════════════════════════════════════════════════════════════════════╝
+""")
 
-    print("                 Version 1.0")
     print()
 
 
+def pause():
+    input("\nPress Enter to continue...")
+
+
 def main():
+
     while True:
+
         banner()
 
         print("[1] Phone Number Info")
@@ -29,49 +47,59 @@ def main():
         choice = input("\n[>] Enter choice: ").strip()
 
         if choice == "1":
-            clear()
+
             banner()
 
             print("[+] Phone Number Info\n")
+
             number = input("[>] Enter phone number: ")
 
-            print("\n[+] Number :", number)
+            print("\n======================================")
+            print("[+] Number :", number)
             print("[+] Status : Number received")
             print("[+] Note   : Public information only.")
+            print("======================================")
 
-            input("\nPress Enter to continue...")
+            pause()
 
         elif choice == "2":
-            clear()
+
             banner()
 
             print("[+] Mutual Phone Number Info\n")
+
             number = input("[>] Enter phone number: ")
 
-            print("\n[+] Number :", number)
+            print("\n======================================")
+            print("[+] Number :", number)
             print("[+] Status : Demo mode")
-            print("[!] Private contacts or accounts are not accessed.")
+            print("[!] Private contacts/accounts are not accessed.")
+            print("======================================")
 
-            input("\nPress Enter to continue...")
+            pause()
 
         elif choice == "3":
-            clear()
+
             banner()
 
             print("[+] Location Info\n")
+
             number = input("[>] Enter phone number: ")
 
-            print("\n[+] Number :", number)
+            print("\n======================================")
+            print("[+] Number :", number)
             print("[+] Result : General region information only")
-            print("[!] Exact live location cannot be obtained from a phone number alone.")
+            print("[!] Exact live location is not available.")
+            print("======================================")
 
-            input("\nPress Enter to continue...")
+            pause()
 
         elif choice == "4":
-            clear()
+
             banner()
 
             print("[+] Number to All Side Link\n")
+
             number = input("[>] Enter phone number: ")
 
             clean = (
@@ -86,14 +114,27 @@ def main():
             print("[+] Bing     : https://www.bing.com/search?q=" + clean)
             print("=============================================")
 
-            input("\nPress Enter to continue...")
+            pause()
 
         elif choice == "5":
+
             clear()
-            print("\nGoodbye! ZAXX CYBER\n")
+
+            print("""
+╔══════════════════════════════════════╗
+║                                      ║
+║             ZAXX CYBER              ║
+║             Version 1.0             ║
+║                                      ║
+║              Goodbye!               ║
+║                                      ║
+╚══════════════════════════════════════╝
+""")
+
             break
 
         else:
+
             print("\n[!] Invalid choice!")
             time.sleep(1)
 
