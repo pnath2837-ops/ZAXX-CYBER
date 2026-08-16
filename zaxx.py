@@ -7,38 +7,32 @@ def clear():
 
 
 def banner():
-    print(r"""
-███████╗ █████╗ ██╗  ██╗██╗  ██╗
-╚══███╔╝██╔══██╗╚██╗██╔╝╚██╗██╔╝
-  ███╔╝ ███████║ ╚███╔╝  ╚███╔╝
- ███╔╝  ██╔══██║ ██╔██╗  ██╔██╗
-███████╗██║  ██║██╔╝ ██╗██╔╝ ██╗
-╚══════╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝
+    clear()
 
-              Version 1.0
-""")
+    # Large ZAXX logo
+    os.system("figlet -f big ZAXX")
+
+    print("                 Version 1.0")
+    print()
 
 
 def main():
     while True:
-        clear()
         banner()
 
-        print("""
-[1] Phone Number Info
-[2] Mutual Phone Number Info
-[3] Location Info
-[4] Number to All Side Link
-[5] Exit
-""")
+        print("[1] Phone Number Info")
+        print("[2] Mutual Phone Number Info")
+        print("[3] Location Info")
+        print("[4] Number to All Side Link")
+        print("[5] Exit")
 
-        choice = input("[>] Enter choice: ").strip()
+        choice = input("\n[>] Enter choice: ").strip()
 
         if choice == "1":
             clear()
             banner()
-            print("\n[+] Phone Number Info\n")
 
+            print("[+] Phone Number Info\n")
             number = input("[>] Enter phone number: ")
 
             print("\n[+] Number :", number)
@@ -50,8 +44,12 @@ def main():
         elif choice == "2":
             clear()
             banner()
-            print("\n[+] Mutual Phone Number Info\n")
-            print("[!] Demo option.")
+
+            print("[+] Mutual Phone Number Info\n")
+            number = input("[>] Enter phone number: ")
+
+            print("\n[+] Number :", number)
+            print("[+] Status : Demo mode")
             print("[!] Private contacts or accounts are not accessed.")
 
             input("\nPress Enter to continue...")
@@ -59,8 +57,8 @@ def main():
         elif choice == "3":
             clear()
             banner()
-            print("\n[+] Location Info\n")
 
+            print("[+] Location Info\n")
             number = input("[>] Enter phone number: ")
 
             print("\n[+] Number :", number)
@@ -72,8 +70,8 @@ def main():
         elif choice == "4":
             clear()
             banner()
-            print("\n[+] Number to All Side Link\n")
 
+            print("[+] Number to All Side Link\n")
             number = input("[>] Enter phone number: ")
 
             clean = (
