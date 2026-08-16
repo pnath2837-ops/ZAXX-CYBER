@@ -51,8 +51,7 @@ while True:
 [2] Mutual Phone Number Info
 [3] Location Info
 [4] Number to All Side Link
-[5] Help
-[6] Exit
+[5] Exit
 """)
 
     choice = input("\n[>] Enter choice: ")
