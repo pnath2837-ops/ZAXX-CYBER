@@ -58,7 +58,7 @@ while True:
     choice = input("\n[>] Enter choice: ")
 
     if choice == "1":
-    print("\n[+] Phone Number Info")
+        print("[+] Phone Number Info")
     number = input("[>] Enter phone number: ")
 
     print("\n[+] Number:", number)
@@ -72,7 +72,7 @@ while True:
         input("\nPress Enter to continue...")
 
     elif choice == "3":
-    print("\n[+] Location Info")
+          print("\n[+] Location Info")
     number = input("[>] Enter phone number with country code: ")
 
     try:
